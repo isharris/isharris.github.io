@@ -5,7 +5,8 @@ gulp.task('fileinclude', async function() {
   gulp.src(['./skeleton/*'])
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+	  indent: true
     }))
     .pipe(gulp.dest('../'));
 });
