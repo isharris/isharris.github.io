@@ -1,0 +1,23 @@
+{
+  "name": "isharris.github.io",
+  "version": "1.0.0",
+  "description": "my first website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isharris/isharris.github.io.git"
+  },
+  "author": "isharris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isharris/isharris.github.io/issues"
+  },
+  "homepage": "https://github.com/isharris/isharris.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}
