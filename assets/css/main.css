@@ -2226,6 +2226,16 @@ input, select, textarea {
 			#header h1 a {
 				color: inherit;
 			}
+		
+		#header h2 {
+			color: #fff;
+			font-size: 2em;
+			line-height: 1em;
+		}
+
+			#header h2 a {
+				color: inherit;
+			}
 
 		#header .button {
 			display: inline-block;
