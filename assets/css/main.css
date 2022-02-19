@@ -2176,7 +2176,11 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("../../images/banner.jpg");
+		/* background-image: url("../../images/banner.jpg"); */
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2199,6 +2203,9 @@ input, select, textarea {
 			margin: 0;
 			display: inline-block;
 			vertical-align: middle;
+			/* background: #6e6c6e3b;
+			border-radius: 10px; */
+
 		}
 
 		#header header {
@@ -2323,6 +2330,10 @@ input, select, textarea {
 			#nav > ul:after {
 				right: 100%;
 				margin-right: 1px;
+			}
+
+			#nav > ul > li:hover {
+				border-color: rgba(192, 192, 192, 0.35);
 			}
 
 			#nav > ul > li {
