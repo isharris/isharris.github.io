@@ -340,6 +340,16 @@ input, select, textarea {
 			width: 16.66667%;
 		}
 
+		/* .row.gtr-50 > .col-2 {
+			align-items: top;
+			width: 25%;
+		}
+
+		.row.gtr-50 > .col-2 {
+			align-items: top;
+			width: 25%;
+		} */
+
 		.row > .off-2 {
 			margin-left: 16.66667%;
 		}
@@ -360,11 +370,11 @@ input, select, textarea {
 			/* display: flex;
 			justify-content: center; */
 			align-items: top;
-			width: 15%;
+			width: 25%;
 		}
 
 		.row.gtr-50 > .col-8 {
-			width: 85%;
+			width: 75%;
 		}
 
 		.row > .off-4 {
