@@ -353,12 +353,12 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 20%;
+			width: 25%;
 		}
 
 		.row.gtr-50 > .col-4 {
-			display: flex;
-			justify-content: center;
+			/* display: flex;
+			justify-content: center; */
 			align-items: top;
 			width: 10%;
 		}
@@ -396,7 +396,7 @@ input, select, textarea {
 		}
 
 		.row > .col-8 {
-			width: 80%;
+			width: 75%;
 		}
 
 		.row > .off-8 {
@@ -607,7 +607,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-wide {
-					width: 33.33333%;
+					width: 25%;
 				}
 
 				.row > .off-4-wide {
@@ -639,7 +639,7 @@ input, select, textarea {
 				}
 
 				.row > .col-8-wide {
-					width: 66.66667%;
+					width: 75%;
 				}
 
 				.row > .off-8-wide {
@@ -852,7 +852,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-normal {
-					width: 33.33333%;
+					width: 25%;
 				}
 
 				.row > .off-4-normal {
@@ -884,7 +884,7 @@ input, select, textarea {
 				}
 
 				.row > .col-8-normal {
-					width: 66.66667%;
+					width: 75%;
 				}
 
 				.row > .off-8-normal {
@@ -1097,7 +1097,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-narrow {
-					width: 33.33333%;
+					width: 25%;
 				}
 
 				.row > .off-4-narrow {
@@ -1129,7 +1129,7 @@ input, select, textarea {
 				}
 
 				.row > .col-8-narrow {
-					width: 66.66667%;
+					width: 75%;
 				}
 
 				.row > .off-8-narrow {
@@ -1342,7 +1342,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-narrower {
-					width: 33.33333%;
+					width: 25%;
 				}
 
 				.row > .off-4-narrower {
@@ -1374,11 +1374,11 @@ input, select, textarea {
 				}
 
 				.row > .col-8-narrower {
-					width: 66.66667%;
+					width: 75%;
 				}
 
 				.row > .off-8-narrower {
-					margin-left: 66.66667%;
+					margin-left: 80%;
 				}
 
 				.row > .col-9-narrower {
@@ -1587,7 +1587,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-mobile {
-					width: 33.33333%;
+					width: 25%;
 				}
 
 				.row > .off-4-mobile {
@@ -1619,7 +1619,7 @@ input, select, textarea {
 				}
 
 				.row > .col-8-mobile {
-					width: 66.66667%;
+					width: 75%;
 				}
 
 				.row > .off-8-mobile {
