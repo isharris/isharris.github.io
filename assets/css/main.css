@@ -1809,7 +1809,7 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
-			border: 5px solid #00ccbb;
+			border: 2px solid #00ccbb;
 		}
 
 		.image.fit {
