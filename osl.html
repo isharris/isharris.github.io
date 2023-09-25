@@ -54,64 +54,128 @@
 											<a href="#https://neurobionics.robotics.umich.edu/">University of Michigan <br> Neurobionics Lab</a>
 										</p>
 									</div>
-									<div class="col-4 d-flex justify-content-center">
+									<div class="col-4">
 										<i class="icon regular fa-address-book" aria-hidden="true"></i>
 
 									</div>
 									<div class="col-8">
-										<h4>References</h4>
+										<h4>Lab Director</h4>
 										<p>
-											Elliott Rouse <br> Gray Thomas
+											Elliott Rouse
 										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon regular fa-address-book" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Collaborator</h4>
+										<p>
+											Gray Thomas
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-code" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Code Languages</h4>
+										<p>
+											Python, Bash <br>
+											MATLAB
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-microchip" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Embedded System</h4>
+										<p>
+											Raspberry Pi 3
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-gear" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Actuators</h4>
+										<p>
+											Dephy BLDC Motors <br> OSL Torsional Spring
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-wave-square" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Control Strategy</h4>
+										<p>
+											Feedforward + <br> Disturbance Observer + <br> Full State Feedback
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-graduation-cap" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Paper</h4>
+										<p>
+											Coming Soon! <br>
+											IEEE RA-L 2023
+										</p>
+									</div>
 								</div>
-								<footer>
+								<!-- <footer>
 									<a href="#" class="button">Magna Adipiscing</a>
-								</footer>
+								</footer> -->
 							</section>
 						</div>
 						<div class="col-8 col-12-mobile imp-mobile" id="content">
 							<article id="main">
 								<header>
-									<h2><a href="#">Left Sidebar</a></h2>
-									<p>
-										Morbi convallis lectus malesuada sed fermentum dolore amet
-									</p>
+									<h25>Bionic Leg Impedance Controller</h25>
 								</header>
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<p>
-									Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-									posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-									lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-									consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-									interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-									natoque aenean scelerisque vel lacinia mollis quam sodales congue.
-								</p>
+								<div class="image featured">
+									<img src="images/SEA_Testbench/SEA_test_bench_p1_crop.jpg" alt="" />
+									<p class="caption">Series Elastic Actuator Testbed</p>
+								</div>
 								<section>
 									<header>
-										<h3>Ultrices tempor sagittis nisl</h3>
+										<h3>Motivation</h3>
 									</header>
 									<p>
-										Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-										at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-										feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-										fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus
-										egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-									</p>
-									<p>
-										Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-										orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-										ut penatibus fermentum nibh erat malesuada varius.
+										To emulate the behavior of a biological leg, a robotic prosthesis like the OSL must simultaneously accomplish two tasks:
+										<p style="margin-left: 25px;">
+											1. Accurately track nominal joint trajectories for any given activity (e.g. normal walking, stair descent, running)
+										</p>
+										<p style="margin-left: 25px;">
+											2. Exhibit a mechanical impedance that mimics the biological joint, 
+											thereby allowing the leg to respond naturally to unexpected perturbations (e.g. slipping on ice)
+										</p>
+										To achieve both goals in the presence of disturbances and non-linearities caused by the OSL's economic design, 
+										a series elastic actuator (SEA) combined with a disturbance observer can be used. 
 									</p>
 								</section>
 								<section>
 									<header>
-										<h3>Augue euismod feugiat tempus</h3>
+										<h3>Contribution</h3>
 									</header>
 									<p>
-										Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-										feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-										ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-										egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+										Given the variety of tradeoffs and complexities associated with introducing a SEA control framework on a prosthesis, 
+										controllers are perfected on a test bed prior to human subject testing. My role was to model, 
+										simulate and test a disturbance observer control algorithm first in software, 
+										and then subsequently on the embedded system. 
+										Code was written using Python in a Linux development environment, 
+										and the system was modeled using a discrete time state space representation.
+									</p>
+									<header>
+										<h3>Results</h3>
+									</header>
+									<p>
+										Preliminary results show successful tracking of knee angles and torques despite excessive friction caused by the OSL's 50:1 transmission. Of particular interest, torque error was reduced to ± 3.5 Nm which is crucial for allowing amputees to swing their leg forward with natural pendulum dynamics as they would with a passive prosthesis. Additionally, due to the successful implementation of a disturbance observer in lieu of more classical methods like PID control, 
+										the groundwork has been laid for an outer layer of compliance/impedance control capable of realizing biological damping and stiffness.
 									</p>
 								</section>
 							</article>

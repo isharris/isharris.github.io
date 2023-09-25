@@ -110,20 +110,24 @@ input, select, textarea {
 		font-weight: 300;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h25, h3, h4, h5, h6 {
 		font-weight: 400;
 		color: #00ccbb;
 		line-height: 1.25em;
 	}
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	h1 a, h2 a, h25 a h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
 		text-decoration: none;
 		border-bottom-color: transparent;
 	}
 
-	h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+	h1 strong, h2 strong, h25 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 		font-weight: 600;
+	}
+
+	h25 {
+		font-size: 2em;
 	}
 
 	h2 {
@@ -349,10 +353,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			/* display: flex;
-			justify-content: center;
-			align-items: center; */
-			width: 33.33333%;
+			width: 20%;
 		}
 
 		.row.gtr-50 > .col-4 {
@@ -395,7 +396,7 @@ input, select, textarea {
 		}
 
 		.row > .col-8 {
-			width: 66.66667%;
+			width: 80%;
 		}
 
 		.row > .off-8 {
@@ -1802,11 +1803,13 @@ input, select, textarea {
 		display: inline-block;
 		border: 0;
 		outline: 0;
+		text-align: center;
 	}
 
 		.image img {
 			display: block;
 			width: 100%;
+			border: 5px solid #00ccbb;
 		}
 
 		.image.fit {
@@ -1817,7 +1820,13 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 4em 0;
+			margin: 0 0 2em 0;
+		}
+
+		.caption {
+			text-align: center; /* Center the text horizontally */
+			margin-top: 0.5em; /* Adjust as needed to control the space between the image and the caption */
+			font-style: italic; /* Example: make the caption italic */
 		}
 
 		.image.left {
