@@ -360,11 +360,11 @@ input, select, textarea {
 			/* display: flex;
 			justify-content: center; */
 			align-items: top;
-			width: 10%;
+			width: 15%;
 		}
 
 		.row.gtr-50 > .col-8 {
-			width: 90%;
+			width: 85%;
 		}
 
 		.row > .off-4 {
