@@ -1825,12 +1825,13 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			margin: 1em 0 2em 0;
 		}
 
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			margin: 0em 0 2em 0;
 		}
 
 		.caption {
@@ -2203,7 +2204,7 @@ input, select, textarea {
 	.wrapper {
 		background: #000000;
 		margin: 0 0 2em 0;
-		padding: 6em 0 6em 0;
+		padding: 0em 0 6em 0;
 	}
 
 		.wrapper.style2 {
@@ -2489,7 +2490,13 @@ input, select, textarea {
 		text-align: center;
 		padding: 4.5em 0 4.5em 0;
 		margin-bottom: 0;
+		border-top: 1px solid #00ccbb;
+		border-bottom: 1px solid #00ccbb;
 	}
+
+		#banner header {
+			
+		}
 
 		#banner header > p {
 			margin-bottom: 0;
