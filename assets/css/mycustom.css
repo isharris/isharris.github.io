@@ -1,35 +1,102 @@
-/* Style for the code block container */
-.terminal-block {
-    /* display: block; */
-    background-color: #000; /* Background color (black) */
-    text-align: left;
-    padding-left: 10px;
-    /* color: #00ff00; Text color (green) */
-    font-family: Monaco, monospace; /* Monospace font for code */
-    /* padding: 10px; Padding around the code block */
-    border: 1px solid #ccc; /* Border with a light gray color */
-    border-radius: 5px; /* Rounded corners */
-    overflow: auto; 
-    white-space: no-wrap;
+.about {
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column-1 {
+  /* width: 25%; Set the width of the first column to 40% of the screen width */
+  flex: 1 1 25%;
+  /* min-width: 200px; */
+}
+
+.headshot {
+  width: 100%; 
+  max-width: 250px;
+  display: block; /* Make the image a block element to avoid extra space at the bottom */
+}
+
+.text-1 {
+  /* Limit the text to 5 lines and prevent overflow */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  width: 100%; /* Ensure the text does not overflow the column */
+  padding: 10px 0 0 0;
+}
+
+.text-2 {
+  width: 100%; /* Ensure the text does not overflow the column */
+  /* text-align: center; */
+}
+
+.column-2 {
+  flex-grow: 1;
+  width: 75%;
+  /* flex: 1 1 75%; */
+  padding: 0 40px; 
+}
+
+/* Media query for screens with a max-width of 768px (typical for tablets and smaller) */
+@media (max-width: 768px) {
+
+  .column-1, .column-2 {
+      /* min-width: 100%; Make both columns take up the full width of the container */
+      flex: none;
+      /* width: 100% */
+      /* text-align: center; Center the text */
   }
-  
-  /* Style for the code itself */
-  .terminal-block .command {
-    display: inline;
-    /* padding: 10px; Padding for code lines */
-    color: #00ccbb; /* Prompt color (yellow) */
-    white-space: no-wrap; /* Preserve line breaks and white spaces */
+
+  .column-2 {
+    width: 100%;
+    padding: 20px 20px; 
   }
-  
-  /* Style for terminal prompt (optional) */
-  .terminal-block .prompt {
-    display: inline;
-    color: #ffffff;; /* Prompt color (yellow) */
-    /* margin-right: -10px; */
+
+  .column-1 {
+      margin: 0 auto;
+      /* width: 250px; */
   }
-  
-  /* Style for terminal output (optional) */
-  .terminal-block .output {
-    color: #ffffff; /* Output color (white) */
-    white-space: no-wrap;
-  }
+
+}
+/* .about {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  flex-basis: 50%; /* Divide the container width by the number of columns */
+  /* background-color: #f2f2f2; Optional: for visual representation */
+  /* padding: 20px; /* Optional: for some inner space in the columns */
+  /* box-sizing: border-box;
+  height: 250px;
+}
+
+.nested-container {
+  display: flex;
+  gap: 10px;
+  box-sizing: border-box;
+  height: 250px;
+}
+
+.nested-column {
+  /* padding: 10px; */
+  /* box-sizing: border-box;
+  /* margin-bottom: 10px; */
+  /* height: 250px;
+} */
+
+/* .nested-column img {
+  /* max-width: 100%; Ensures that images do not overflow the column */
+  /* max-height: 100%;
+  width: auto; */
+/* } */
+
+/* .image-wrapper {
+  text-align: right;
+}
+
+.button-wrapper {
+  text-align: center;
+} */
