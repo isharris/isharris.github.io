@@ -1,35 +1,38 @@
-/* Style for the code block container */
-.terminal-block {
-    /* display: block; */
-    background-color: #000; /* Background color (black) */
-    text-align: left;
-    padding-left: 10px;
-    /* color: #00ff00; Text color (green) */
-    font-family: Monaco, monospace; /* Monospace font for code */
-    /* padding: 10px; Padding around the code block */
-    border: 1px solid #ccc; /* Border with a light gray color */
-    border-radius: 5px; /* Rounded corners */
-    overflow: auto; 
-    white-space: no-wrap;
-  }
-  
-  /* Style for the code itself */
-  .terminal-block .command {
-    display: inline;
-    /* padding: 10px; Padding for code lines */
-    color: #00ccbb; /* Prompt color (yellow) */
-    white-space: no-wrap; /* Preserve line breaks and white spaces */
-  }
-  
-  /* Style for terminal prompt (optional) */
-  .terminal-block .prompt {
-    display: inline;
-    color: #ffffff;; /* Prompt color (yellow) */
-    /* margin-right: -10px; */
-  }
-  
-  /* Style for terminal output (optional) */
-  .terminal-block .output {
-    color: #ffffff; /* Output color (white) */
-    white-space: no-wrap;
-  }
+.about {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  flex-basis: 50%; /* Divide the container width by the number of columns */
+  /* background-color: #f2f2f2; Optional: for visual representation */
+  padding: 20px; /* Optional: for some inner space in the columns */
+  box-sizing: border-box;
+  height: 250px;
+}
+
+.nested-container {
+  display: flex;
+  gap: 10px;
+}
+
+.nested-column {
+  /* padding: 10px; */
+  box-sizing: border-box;
+  /* margin-bottom: 10px; */
+  height: 250px;
+}
+
+.nested-column img {
+  /* max-width: 100%; Ensures that images do not overflow the column */
+  max-height: 100%;
+  width: auto;
+}
+
+.image-wrapper {
+  text-align: right;
+}
+
+.button-wrapper {
+  text-align: center;
+}
