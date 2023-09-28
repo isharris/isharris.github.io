@@ -69,6 +69,16 @@
 /* gimbal */
 .gim {
   display: grid;
+  border-top: 2px solid #ffffff;
+  padding-top: 20px;
   grid-column-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+/* generic project */
+/* #header .subtitle {
+		font-weight: 400;
+		color: #ffffff;
+		/* line-height: 1.25em; */
+		/* font-size: 2em;
+} */

@@ -1792,6 +1792,7 @@ input, select, textarea {
 
 	header {
 		margin: 0 0 1em 0;
+		/* border-bottom: 2px solid #ffffff; */
 	}
 
 		header > p {
@@ -3189,9 +3190,9 @@ input, select, textarea {
 
 		/* Main */
 
-			#main > header {
+			/* #main > header {
 				text-align: center;
-			}
+			} */
 
 		/* Footer */
 
