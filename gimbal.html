@@ -46,12 +46,14 @@
 								</header>
 								<div class="row gtr-50">
 									<div class="col-4">
-										<i class="icon regular fa-building"></i>
+										<i class="icon regular fa-address-book" aria-hidden="true"></i>
+
 									</div>
 									<div class="col-8">
-										<h4>Organization</h4>
+										<h4>Client</h4>
 										<p>
-											<a href="https://neurobionics.robotics.umich.edu/">University&nbsp;of&nbsp;Michigan <br> Neurobionics Lab</a>
+											Dr. Stephen Cain, <br>
+											UofM Biomechanics Resarch Scientist
 										</p>
 									</div>
 									<div class="col-4">
@@ -59,10 +61,12 @@
 
 									</div>
 									<div class="col-8">
-										<h4>References</h4>
+										<h4>Collaborators</h4>
 										<p>
-											Elliott Rouse, PhD <br>
-											Gray Thomas, PhD
+											Keyen Yockey <br>
+											Alexander Rees <br>
+											Chelsea Nienhuis <br>
+											Ziqi Wang
 										</p>
 									</div>
 									<div class="col-4">
@@ -72,8 +76,7 @@
 									<div class="col-8">
 										<h4>Code Languages</h4>
 										<p>
-											Python <br> Bash <br>
-											MATLAB
+											Arduino C++
 										</p>
 									</div>
 									<div class="col-4">
@@ -83,7 +86,7 @@
 									<div class="col-8">
 										<h4>Embedded System</h4>
 										<p>
-											Raspberry Pi 3
+											Teensy 3.5 <br> Microcontroller
 										</p>
 									</div>
 									<div class="col-4">
@@ -91,30 +94,9 @@
 
 									</div>
 									<div class="col-8">
-										<h4>Actuators</h4>
+										<h4>Sensors</h4>
 										<p>
-											Dephy BLDC Motors <br> OSL Torsional Spring
-										</p>
-									</div>
-									<div class="col-4">
-										<i class="icon solid fa-wave-square" aria-hidden="true"></i>
-
-									</div>
-									<div class="col-8">
-										<h4>Control Strategy</h4>
-										<p>
-											Feedforward + <br> Disturbance Observer + <br> Full State Feedback
-										</p>
-									</div>
-									<div class="col-4">
-										<i class="icon solid fa-graduation-cap" aria-hidden="true"></i>
-
-									</div>
-									<div class="col-8">
-										<h4>Paper</h4>
-										<p>
-											Coming Soon! <br>
-											IEEE RA-L 2023
+											CUI Capacitve Angle Encoders
 										</p>
 									</div>
 								</div>
@@ -126,27 +108,28 @@
 						<div class="col-8 col-12-mobile imp-mobile" id="content">
 							<article id="main">
 								<header>
-									<h25>Bionic Leg Impedance Controller</h25>
+									<h25>3DoF Instrumented Gimbal</h25>
 								</header>
-								<div class="image featured">
-									<img src="images/SEA_Testbench/SEA_test_bench_p1_crop.jpg" alt="" />
-									<p class="caption">Series Elastic Actuator Testbed</p>
+								<div class="gim">
+									<div class="image featured">
+										<img src="images/Gimbal/gim_rotate_crop.png" alt="" />
+									</div>
+									<div class="image featured">
+										<img src="images/Gimbal/daq.jpg" alt="" />
+									</div>	
 								</div>
 								<section>
 									<header>
 										<h3>Motivation</h3>
 									</header>
 									<p>
-										To emulate the behavior of a biological leg, a robotic prosthesis like the OSL must simultaneously accomplish two tasks:
-										<p style="margin-left: 25px;">
-											1. Accurately track nominal joint trajectories for any given activity (e.g. normal walking, stair descent, running)
-										</p>
-										<p style="margin-left: 25px;">
-											2. Exhibit a mechanical impedance that mimics the biological joint, 
-											thereby allowing the leg to respond naturally to unexpected perturbations (e.g. slipping on ice)
-										</p>
-										To achieve both goals in the presence of disturbances and non-linearities caused by the OSL's economic design, 
-										a series elastic actuator (SEA) combined with a disturbance observer can be used. 
+										Inertial measurement units (IMUs) are small sensor packs that include accelerometers, gyroscopes, and magnetometers 
+										which make them ideal for a wide variety of robotics applications including the measurement of joint angles. 
+										To determine absolute orientation and location of the object they are attached to, IMU signals must be integrated, 
+										so error in their output is vulnerable to drift during long periods use. Additional error can also be introduced 
+										through magnetic interference with the magnetometer readings. To combat this, calibration and post-processing 
+										algorithms can be made to adjust for these measurement errors, but ground truth angle data is needed to quantify 
+										their performance.  
 									</p>
 								</section>
 								<section>
@@ -154,21 +137,47 @@
 										<h3>Contribution</h3>
 									</header>
 									<p>
-										Given the variety of tradeoffs and complexities associated with introducing a SEA control framework on a prosthesis, 
-										controllers are perfected on a test bed prior to human subject testing. My role was to model, 
-										simulate and test a disturbance observer control algorithm first in software, 
-										and then subsequently on the embedded system. 
-										Code was written using Python in a Linux development environment, 
-										and the system was modeled using a discrete time state space representation.
+										Working with four other teammates, I developed a measurement apparatus that can collect ground truth angles for 
+										comparison with those derived from IMU algorithms. Throughout the entirety of the project, I led all aspects of 
+										the electrical and software design, which included sensor, battery, and microcontroller selection, assembly of 
+										our data acquisition unit, and firmware creation using Arduino C++.
 									</p>
+									<div class="image featured">
+										<img src="images/Gimbal/flow_diagram_daq.png" alt="" />
+										<p class="caption">Flow Diagram for Data Acquisition System</p>
+									</div>
 									<header>
 										<h3>Results</h3>
 									</header>
 									<p>
-										Preliminary results show successful tracking of knee angles and torques despite excessive friction caused by the OSL's 50:1 transmission. Of particular interest, torque error was reduced to ± 3.5 Nm which is crucial for allowing amputees to swing their leg forward with natural pendulum dynamics as they would with a passive prosthesis. Additionally, due to the successful implementation of a disturbance observer in lieu of more classical methods like PID control, 
-										the groundwork has been laid for an outer layer of compliance/impedance control capable of realizing biological damping and stiffness.
+										During a period with limited access to manufacturing resources due to COVID 19 restrictions, 
+										my team delivered a fully functioning prototype to our stakeholder which met all key design 
+										requirements and specifications. The requirements achieved by my electrical design included:
+									</p>
+									<p style="margin-left: 25px;">
+										1. Total cost less than $400
+									</p>
+									<p style="margin-left: 25px;">
+										2. Measuring angles to within ± 0.2°
+									</p>
+									<p style="margin-left: 25px;">
+										3. Reliable sampling at 300Hz
+									</p>
+									<p style="margin-left: 25px;">
+										4. Capable of lasting over 8 hours on a single battery charge
+									</p>
+									<p style="margin-left: 25px;">
+										5. Easy method for storing and transferring large quantities of data
 									</p>
 								</section>
+								<div class="gim">
+									<div class="image featured">
+										<img src="images/Gimbal/benchmark_testing.jpg" alt="" />
+									</div>
+									<div class="image featured">
+										<img src="images/Gimbal/pwm_check.jpg" alt="" />
+									</div>
+								</div>
 							</article>
 						</div>
 					</div>

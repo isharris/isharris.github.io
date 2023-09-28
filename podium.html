@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Left Sidebar - Helios by HTML5 UP</title>
+		<title>Mechatronic Ankle Showcase</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -59,10 +59,20 @@
 
 									</div>
 									<div class="col-8">
-										<h4>References</h4>
+										<h4>Lab Director</h4>
 										<p>
-											Elliott Rouse, PhD <br>
-											Gray Thomas, PhD
+											Elliott Rouse
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon regular fa-address-book" aria-hidden="true"></i>
+
+									</div>
+									<div class="col-8">
+										<h4>Collaborators</h4>
+										<p>
+											Leo McManus, <br>
+											Justin Holmer
 										</p>
 									</div>
 									<div class="col-4">
@@ -72,8 +82,7 @@
 									<div class="col-8">
 										<h4>Code Languages</h4>
 										<p>
-											Python <br> Bash <br>
-											MATLAB
+											Python <br> Bash
 										</p>
 									</div>
 									<div class="col-4">
@@ -83,7 +92,7 @@
 									<div class="col-8">
 										<h4>Embedded System</h4>
 										<p>
-											Raspberry Pi 3
+											Raspberry Pi 3 and Neurobionics VSPA Dev Board
 										</p>
 									</div>
 									<div class="col-4">
@@ -91,62 +100,45 @@
 
 									</div>
 									<div class="col-8">
-										<h4>Actuators</h4>
+										<h4>Sensors</h4>
 										<p>
-											Dephy BLDC Motors <br> OSL Torsional Spring
+											Hall Affect Encoder, <br> Current Sensor
 										</p>
 									</div>
 									<div class="col-4">
 										<i class="icon solid fa-wave-square" aria-hidden="true"></i>
 
 									</div>
-									<div class="col-8">
-										<h4>Control Strategy</h4>
-										<p>
-											Feedforward + <br> Disturbance Observer + <br> Full State Feedback
-										</p>
-									</div>
-									<div class="col-4">
-										<i class="icon solid fa-graduation-cap" aria-hidden="true"></i>
-
-									</div>
-									<div class="col-8">
-										<h4>Paper</h4>
-										<p>
-											Coming Soon! <br>
-											IEEE RA-L 2023
-										</p>
-									</div>
 								</div>
-								<!-- <footer>
-									<a href="#" class="button">Magna Adipiscing</a>
-								</footer> -->
+								<div class="image featured">
+									<img src="images/Podium/podium.jpg" alt="" />
+								</div>
 							</section>
 						</div>
 						<div class="col-8 col-12-mobile imp-mobile" id="content">
 							<article id="main">
 								<header>
-									<h25>Bionic Leg Impedance Controller</h25>
+									<h25>Mechatronic Ankle Showcase</h25>
 								</header>
-								<div class="image featured">
-									<img src="images/SEA_Testbench/SEA_test_bench_p1_crop.jpg" alt="" />
-									<p class="caption">Series Elastic Actuator Testbed</p>
+								<div class="gim">
+									<div class="image featured">
+										<img src="images/Podium/podium_crop.jpg" alt="" />
+									</div>
+									<div class="image featured">
+										<img src="images/Podium/dial.jpg" alt="" />
+									</div>	
 								</div>
 								<section>
 									<header>
 										<h3>Motivation</h3>
 									</header>
 									<p>
-										To emulate the behavior of a biological leg, a robotic prosthesis like the OSL must simultaneously accomplish two tasks:
-										<p style="margin-left: 25px;">
-											1. Accurately track nominal joint trajectories for any given activity (e.g. normal walking, stair descent, running)
-										</p>
-										<p style="margin-left: 25px;">
-											2. Exhibit a mechanical impedance that mimics the biological joint, 
-											thereby allowing the leg to respond naturally to unexpected perturbations (e.g. slipping on ice)
-										</p>
-										To achieve both goals in the presence of disturbances and non-linearities caused by the OSL's economic design, 
-										a series elastic actuator (SEA) combined with a disturbance observer can be used. 
+										The human ankle joint exhibits a varying stiffness during different tasks and phases of gait. 
+										Traditional prosthetic feet are unable to mimic this biological behavior which can lead to a poor experience for the amputee. 
+										To address this issue, researchers at the University of Michigan Neurobionics Lab developed the Variable Stiffness 
+										Ankle Prosthesis, or VSPA. To promote this novel technology, I worked with two other teammates to create an interactive display 
+										for the first VSPA prototype. More than just a pretty podium, this showcase also educates onlookers about the engineering 
+										concepts behind the VSPA foot.
 									</p>
 								</section>
 								<section>
@@ -154,19 +146,17 @@
 										<h3>Contribution</h3>
 									</header>
 									<p>
-										Given the variety of tradeoffs and complexities associated with introducing a SEA control framework on a prosthesis, 
-										controllers are perfected on a test bed prior to human subject testing. My role was to model, 
-										simulate and test a disturbance observer control algorithm first in software, 
-										and then subsequently on the embedded system. 
-										Code was written using Python in a Linux development environment, 
-										and the system was modeled using a discrete time state space representation.
+										I had my hand in all aspects of the VSPA display which included everything from the wood working to the 
+										glowing acrylic sign on the front of the podium, but my primary contribution was integrating the VSPA 
+										electronics into a graphical user interface (GUI).  The GUI was built using a Python state machine which 
+										would loop through various modes depending on user input via two LED buttons and feedback from the ankle's encoders. 
 									</p>
 									<header>
 										<h3>Results</h3>
 									</header>
 									<p>
-										Preliminary results show successful tracking of knee angles and torques despite excessive friction caused by the OSL's 50:1 transmission. Of particular interest, torque error was reduced to ± 3.5 Nm which is crucial for allowing amputees to swing their leg forward with natural pendulum dynamics as they would with a passive prosthesis. Additionally, due to the successful implementation of a disturbance observer in lieu of more classical methods like PID control, 
-										the groundwork has been laid for an outer layer of compliance/impedance control capable of realizing biological damping and stiffness.
+										My team's hard work resulted in a beautiful showcase which can be found standing in the University of Michigan Orthotics 
+										and Prosthetics Center. Bug free and virtually autonomous, the demo has been running smoothly ever since its 2018 debut.
 									</p>
 								</section>
 							</article>

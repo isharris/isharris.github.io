@@ -49,6 +49,10 @@
       /* text-align: center; Center the text */
   }
 
+  /* .text-1, .text-2 .headshot {
+    width: 50%;
+  } */
+
   .column-2 {
     width: 100%;
     padding: 20px 20px; 
@@ -60,43 +64,11 @@
   }
 
 }
-/* .about {
-  display: flex;
-  gap: 10px;
+
+
+/* gimbal */
+.gim {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
-.column {
-  flex-basis: 50%; /* Divide the container width by the number of columns */
-  /* background-color: #f2f2f2; Optional: for visual representation */
-  /* padding: 20px; /* Optional: for some inner space in the columns */
-  /* box-sizing: border-box;
-  height: 250px;
-}
-
-.nested-container {
-  display: flex;
-  gap: 10px;
-  box-sizing: border-box;
-  height: 250px;
-}
-
-.nested-column {
-  /* padding: 10px; */
-  /* box-sizing: border-box;
-  /* margin-bottom: 10px; */
-  /* height: 250px;
-} */
-
-/* .nested-column img {
-  /* max-width: 100%; Ensures that images do not overflow the column */
-  /* max-height: 100%;
-  width: auto; */
-/* } */
-
-/* .image-wrapper {
-  text-align: right;
-}
-
-.button-wrapper {
-  text-align: center;
-} */
