@@ -70,6 +70,7 @@
 .gim {
   display: grid;
   border-top: 2px solid #ffffff;
+  /* border-bottom: 2px solid #ffffff; */
   padding-top: 20px;
   grid-column-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

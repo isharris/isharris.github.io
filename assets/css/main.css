@@ -1832,7 +1832,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 2em 0;
+			/* margin: 0 0 1em 0; */
 		}
 
 		.caption {
@@ -2872,7 +2872,7 @@ input, select, textarea {
 		/* Image */
 
 			.image.featured {
-				margin: 0 0 2em 0;
+				margin: 0 0 1em 0;
 			}
 
 			.image.left {
@@ -3011,7 +3011,7 @@ input, select, textarea {
 						position: absolute;
 						left: 50%;
 						margin-left: -40px;
-						background: rgba(132, 128, 136, 0.75);
+						background: #4f5963;
 						border-top: 0;
 						border-radius: 0 0 0.35em 0.35em;
 					}
@@ -3037,7 +3037,8 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10002;
-				background: #1f1920;
+				background: #4f5963;
+				/* background: #000000; */
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
 			}
@@ -3062,7 +3063,7 @@ input, select, textarea {
 					padding: 0.5em;
 					color: #ddd;
 					border: 0;
-					border-top: dotted 1px rgba(255, 255, 255, 0.05);
+					border-top: solid 1px rgba(0, 255, 234, 0.1);
 				}
 
 					#navPanel .link:first-child {
@@ -3070,7 +3071,7 @@ input, select, textarea {
 					}
 
 					#navPanel .link.depth-0 {
-						color: #000000;
+						color: #00ccbb;
 						font-weight: 600;
 					}
 
