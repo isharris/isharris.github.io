@@ -1,19 +1,7 @@
-.about {
-  display: flex;
-  /* align-items: flex-start; */
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.column-1 {
-  /* width: 25%; Set the width of the first column to 40% of the screen width */
-  flex: 1 1 25%;
-  /* min-width: 200px; */
-}
 
 .headshot {
-  width: 100%; 
-  max-width: 250px;
+  height: 100%;
+  /* max-width: 250px; */
   display: block; /* Make the image a block element to avoid extra space at the bottom */
 }
 
@@ -25,18 +13,7 @@
   -webkit-box-orient: vertical;
   width: 100%; /* Ensure the text does not overflow the column */
   padding: 10px 0 0 0;
-}
-
-.text-2 {
-  width: 100%; /* Ensure the text does not overflow the column */
-  /* text-align: center; */
-}
-
-.column-2 {
-  flex-grow: 1;
-  width: 75%;
-  /* flex: 1 1 75%; */
-  padding: 0 40px; 
+  /* font-size: 10px; */
 }
 
 /* gimbal */
@@ -45,9 +22,12 @@
   /* border-top: 2px solid #ffffff; */
   /* border-bottom: 2px solid #ffffff; */
   padding-top: 20px;
-  grid-column-gap: 15px;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 15px;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 300px 1fr;
+  /* margin: auto; */
+  /* border: solid 1px #00ccbb; */
 }
 
 .head {
@@ -55,6 +35,8 @@
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
+  min-width: 200px;
+  
 }
 
 .info {
@@ -62,6 +44,7 @@
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
+  
 }
 
 .summary {
@@ -74,29 +57,14 @@
 /* Media query for screens with a max-width of 768px (typical for tablets and smaller) */
 @media (max-width: 768px) {
 
-  .column-1, .column-2 {
-      /* min-width: 100%; Make both columns take up the full width of the container */
-      flex: none;
-      /* width: 100% */
-      /* text-align: center; Center the text */
-  }
-
-  /* .text-1, .text-2 .headshot {
-    width: 50%;
-  } */
-
-  .column-2 {
-    width: 100%;
-    padding: 20px 20px; 
-  }
-
-  .column-1 {
-      margin: 0 auto;
-      /* width: 250px; */
-  }
-
   .head_grid {
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  }
+
+  .head {
+    justify-self: center;
   }
 
   .info {
@@ -108,7 +76,7 @@
   
   .summary {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: span 2;
     grid-row-start: 2;
     grid-row-end: 2;
   }
