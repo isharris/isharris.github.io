@@ -151,7 +151,19 @@
 										<h3>Significant Achievements</h3>
 									</header>
 									<p>
-										Bla bla splines bla bla multibody bla bla
+										Among the most impactful control solutions I delivered while at Metrea
+										were 
+										<p style="margin-left: 25px;">
+											1. Nonlinear control for trajectory tracking: removed the need for gain scheduling around a large grid of linearized operating points and paved the way for 2. and 3.<br>
+											2. Multibody dynamics formulation with quaternion base kinematics: allowed for higher fidelity simulation of satellites with actuated appendages <br>
+											3. Guidance module which generated 5th order spline trajectories: provided smooth acceleration trajectories which in turn could be used to produce smooth feedforward actuator
+											 efforts that stayed within physical limits <br>
+										</p>
+										All of these algorithms utilized the infamous quaternion as the kinematic description for satellite attitude which removed unwanted singularities caused by Euler angles, 
+										and made the continous spline trajectories possible. It should also be noted that all of these software blocks were written in python with the only 3rd party dependencies being
+										numpy and sympy (the multibody dynamics matrices were also converted to C for speed optimization). This was a must at a small company averse to large software subscriptions (MATLAB) and the desire for 
+										easy plug and play on small linux computers. All software (including the highlighted algorithms) underwent unit testing and was then incorporated into our total system simulation, 
+										where performance was assessed using Monte Carlo simulations. In each case, my algorithms met their intended objectives and were successfully integrated into our software suite.
 									</p>
 								</section>
 							</article>
