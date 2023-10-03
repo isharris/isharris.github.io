@@ -22,7 +22,7 @@
 					<li>
 						<a href="#">Portfolio</a>
 						<ul>
-							<li><a href="#">Satellite Attitude Control</a></li>
+							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
 							<li><a href="osl.html">Bionic Leg Controller</a></li>
 							<li><a href="gimbal.html">3 DoF Instrumented Gimbal</a></li>
 							<li><a href="podium.html">Mechatronic Ankle Showcase</a></li>
@@ -96,13 +96,14 @@
 										</p>
 									</div>
 									<div class="col-4">
-										<i class="icon solid fa-robot" aria-hidden="true"></i>
-
+										<i class="icon solid fa-wave-square" aria-hidden="true"></i>
 									</div>
 									<div class="col-8">
-										<h4>Responsibilities</h4>
+										<h4>Control Theory</h4>
 										<p>
-											GNC Analysis and Design | <br> Actuator and Sensor Selection
+											Nonlinear, <br>
+											Multibody, <br>
+											Discrete Time,
 										</p>
 									</div>
 								</div>
@@ -120,35 +121,37 @@
 								<div class="gim">
 									<div class="image featured">
 										<img src="images/Aero/sat.jpg" alt="" />
-										<p class="caption">Series Elastic Actuator Testbed</p>
 									</div>
 								</div class="gim">
 								<section>
 									<header>
-										<h3>Motivation</h3>
+										<h3>Summary</h3>
 									</header>
 									<p>
-										Ranging from high speed intertet, planet hunting, and space based defense intel, satellite use cases are endless.
+										In the vast landscape of satellite applications, ranging from high-speed internet to interstellar planet hunting, the possibilities are truly endless. 
+										Over the course of nearly three years, I have been fortunate to contribute to this field by developing satellite control algorithms for Metrea Aerospace, 
+										a company dedicated to delivering innovative solutions for national security. Working in a small startup environment, I was asked to take on the full range 
+										of responsibilities required for translating engineering requirements into real software. 
+										
+										These included:
+										<p style="margin-left: 25px;">
+											1. System engineering - synthesizing controller specifications from high level mission CONOPs <br>
+											2. Performing hardware trades for sensors and actuators and interfacing with vendors <br>
+											3. Gathering relevant results from literature reviews of aerospace and control theory topics <br>
+											4. Utilizing technical control theory to design novel, functional, and robust algorithms <br>
+											5. Implementing designs in software using Python and C/C++ for embedded targets <br>
+										</p>
+
+										As part of the core avionics software team I was also tapped to help with a myriad of other tasks including the implementation of 
+										communication protocols like CAN and RS485 and general maintenance of our development infrastructure (code repositories, VMs, etc.).
 									</p>
 								</section>
 								<section>
 									<header>
-										<h3>Contribution</h3>
+										<h3>Significant Achievements</h3>
 									</header>
 									<p>
-										Given the variety of tradeoffs and complexities associated with introducing a SEA control framework on a prosthesis, 
-										controllers are perfected on a test bed prior to human subject testing. My role was to model, 
-										simulate and test a disturbance observer control algorithm first in software, 
-										and then subsequently on the embedded system. 
-										Code was written using Python in a Linux development environment, 
-										and the system was modeled using a discrete time state space representation.
-									</p>
-									<header>
-										<h3>Results</h3>
-									</header>
-									<p>
-										Preliminary results show successful tracking of knee angles and torques despite excessive friction caused by the OSL's 50:1 transmission. Of particular interest, torque error was reduced to ± 3.5 Nm which is crucial for allowing amputees to swing their leg forward with natural pendulum dynamics as they would with a passive prosthesis. Additionally, due to the successful implementation of a disturbance observer in lieu of more classical methods like PID control, 
-										the groundwork has been laid for an outer layer of compliance/impedance control capable of realizing biological damping and stiffness.
+										Bla bla splines bla bla multibody bla bla
 									</p>
 								</section>
 							</article>
