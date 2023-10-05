@@ -2101,7 +2101,7 @@ input, select, textarea {
 		text-align: center;
 		border-radius: 0.5em;
 		text-decoration: none;
-		padding: 0.65em 3em 0.65em 3em;
+		padding: 0.65em 2em 0.65em 2em;
 		border: 0;
 		cursor: pointer;
 		outline: 0;
@@ -2212,6 +2212,13 @@ input, select, textarea {
 		.wrapper.style2 {
 			padding-top: 0;
 		}
+
+		/* @media (min-width: 736px) {
+			.wrapper.style2 {
+				width: 800px;
+				text-align: center;
+			} 
+		  } */
 
 /* Header */
 
