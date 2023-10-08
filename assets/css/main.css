@@ -1838,8 +1838,15 @@ input, select, textarea {
 			/* margin: 0 0 1em 0; */
 		}
 
+		.image.small {
+			display: block;
+			max-width: 700px;
+			margin-left: auto;
+    		margin-right: auto;
+		}
+
 		.caption {
-			text-align: center; /* Center the text horizontally */
+			text-align: center;
 			margin-top: 0.5em; /* Adjust as needed to control the space between the image and the caption */
 			font-style: italic; /* Example: make the caption italic */
 		}
