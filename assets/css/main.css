@@ -3042,7 +3042,9 @@ input, select, textarea {
 						position: absolute;
 						left: 50%;
 						margin-left: -40px;
-						background: #4f5963;
+						/* background: #4f5963; */
+						background: rgba(79, 89, 99 0.5);
+						/* border: solid 1px #00ccbb; */
 						border-top: 0;
 						border-radius: 0 0 0.35em 0.35em;
 					}
@@ -3167,10 +3169,14 @@ input, select, textarea {
 			#header {
 				background-attachment: scroll;
 				padding: 2.5em 0 0 0;
+				/* background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/SEA_Testbench/SEA_test_bench_p1_crop.jpg");
+				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/SEA_Testbench/SEA_test_bench_p1_crop.jpg");
+				background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/SEA_Testbench/SEA_test_bench_p1_crop.jpg");
+				background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/SEA_Testbench/SEA_test_bench_p1_crop.jpg"); */
 			}
 
 				#header .inner {
-					padding-top: 1.5em;
+					padding-top: 0;
 					padding-left: 1em;
 					padding-right: 1em;
 				}
