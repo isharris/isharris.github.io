@@ -111,7 +111,7 @@
 }
 
 /* Media query for screens with a max-width of 768px (typical for tablets and smaller) */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .head_grid {
     grid-template-columns: 1fr;
@@ -125,6 +125,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
     justify-self: center;
+    /* border-left: solid 3px #00ccbb; */
   }
 
   .info {
