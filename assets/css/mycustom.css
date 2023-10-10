@@ -161,12 +161,17 @@
   border-top: 2px solid #ffffff;
 }
 
+.highlight {
+  color: #00ccbb;
+}
+
 .gim {
   display: grid;
   /* border-top: 2px solid #ffffff; */
   /* border-bottom: 2px solid #ffffff; */
   padding-top: 10px;
-  grid-column-gap: 15px;
+  grid-column-gap: 30px;
+  grid-row-gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
