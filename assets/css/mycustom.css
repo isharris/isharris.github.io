@@ -242,3 +242,20 @@
 		height: 36px;
 	}
 }
+
+/* AI nav: desktop shows AI last, mobile dropotron shows AI - Beta second */
+@media screen and (min-width: 737px) {
+	#nav > ul > li.ai-nav-mobile {
+		display: none;
+	}
+}
+
+#navPanel .nav-panel-hide {
+	display: none;
+}
+
+#navPanel .link:hover,
+#navPanel .link.depth-0:hover,
+#navPanel .link.depth-1:hover {
+	color: #ef8376;
+}
