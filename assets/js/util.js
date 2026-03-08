@@ -16,12 +16,13 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target'),
-				panelHide = $this.attr('data-nav-panel-hide'),
-				linkClass = 'link depth-' + indent + (panelHide ? ' nav-panel-hide' : '');
+				panelHide = $this.is('[data-nav-panel-hide]');
+
+			if (panelHide) return;
 
 			b.push(
 				'<a ' +
-					'class="' + linkClass + '"' +
+					'class="link depth-' + indent + '"' +
 					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
 				'>' +
