@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RL Galaga</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.game-container {
+				position: relative;
+				width: 100%;
+				padding-bottom: 75%; /* 3/4 = 0.75 for 4:3 aspect ratio */
+				background: #000;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+			.game-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1024px;
+				height: 768px;
+				border: 0;
+				transform-origin: top left;
+			}
+		</style>
+		<script>
+			function scaleGameIframe() {
+				var container = document.querySelector('.game-container');
+				var iframe = container.querySelector('iframe');
+				var scale = container.clientWidth / 1024;
+				iframe.style.transform = 'scale(' + scale + ')';
+			}
+			window.addEventListener('load', scaleGameIframe);
+			window.addEventListener('resize', scaleGameIframe);
+		</script>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Brain Icon Link -->
+			<a href="https://isaac-ai.dev/" class="brain-icon-link" target="_blank" rel="noopener noreferrer" title="AI Chatbot">
+				<img src="images/icons/brain-circuit.svg" alt="AI Chatbot" />
+			</a>
+
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li class="ai-nav-mobile">
+						<a href="https://isaac-ai.dev/" target="_blank" rel="noopener noreferrer">AI - Beta</a>
+					</li>
+					<li>
+						<a href="index.html#banner">Portfolio</a>
+						<ul>
+							<li><a href="galaga.html">RL Galaga</a></li>
+							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
+							<li><a href="osl.html">Bionic Leg Controller</a></li>
+							<li><a href="gimbal.html">3 DoF Instrumented Gimbal</a></li>
+							<li><a href="podium.html">Mechatronic Ankle Showcase</a></li>
+						</ul>
+					</li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#about">Contact</a></li>
+					<li class="ai-nav-desktop">
+						<a href="https://isaac-ai.dev/" target="_blank" rel="noopener noreferrer" data-nav-panel-hide>AI</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div class="wrapper style1">
+
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-4 col-12-mobile" id="sidebar">
+							<hr class="first" />
+							<section>
+								<header>
+									<h3><a href="#">Project Profile</a></h3>
+								</header>
+								<div class="row gtr-50">
+									<div class="col-4">
+										<i class="icon solid fa-gamepad" aria-hidden="true"></i>
+									</div>
+									<div class="col-8">
+										<h4>Project</h4>
+										<p>
+											Reinforcement <br> Learning Galaga
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon regular fa-building"></i>
+									</div>
+									<div class="col-8">
+										<h4>Framework</h4>
+										<p>
+											<a href="https://github.com/PufferAI/PufferLib" target="_blank" rel="noopener noreferrer">PufferLib</a>
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-code" aria-hidden="true"></i>
+									</div>
+									<div class="col-8">
+										<h4>Code Languages</h4>
+										<p>
+											C <br> Python
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-desktop" aria-hidden="true"></i>
+									</div>
+									<div class="col-8">
+										<h4>Web Runtime</h4>
+										<p>
+											Emscripten <br> WebAssembly <br> raylib
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-brain" aria-hidden="true"></i>
+									</div>
+									<div class="col-8">
+										<h4>AI Technique</h4>
+										<p>
+											Deep RL <br> Policy Gradient
+										</p>
+									</div>
+									<div class="col-4">
+										<i class="icon solid fa-keyboard" aria-hidden="true"></i>
+									</div>
+									<div class="col-8">
+										<h4>Controls</h4>
+										<p>
+											Arrow keys to move <br> Space to shoot
+										</p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="col-8 col-12-mobile imp-mobile" id="content">
+							<article id="main">
+								<header>
+									<h25>RL Galaga</h25>
+									<h3><font color="white">Reinforcement Learning Meets Classic Arcade</font></h3>
+									<div class="white_border"></div>
+								</header>
+								<section>
+									<header>
+										<h3>Play</h3>
+									</header>
+									<p>To play, first click in the game window, then hold shift to take control of the fighter.
+									Spacebar to shoot, arrow keys to move left and right.
+									</p>
+									<div class="game-container">
+										<iframe src="galaga/game.html" allowfullscreen></iframe>
+									</div>
+								</section>
+								<section>
+									<header>
+										<h3>About</h3>
+									</header>
+									<p>
+										A Galaga-style arcade game environment built with
+										<a href="https://github.com/PufferAI/PufferLib" target="_blank" rel="noopener noreferrer">PufferLib</a>. The game is compiled to WebAssembly via Emscripten
+										and rendered with raylib, allowing a trained RL agent to run entirely in the browser.
+									</p>
+								</section>
+							</article>
+						</div>
+					</div>
+					<!-- Footer -->
+					<div class="row">
+						<div class="col-12">
+							<!-- Copyright -->
+								<div class="copyright">
+									<ul class="menu">
+										<li>&copy; Isaac R Harris. 2023</li><li>Design adapted from <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
