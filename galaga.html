@@ -28,6 +28,13 @@
 				margin: 0.35em 0;
 				padding-left: 0.25em;
 			}
+			#main > header {
+				margin-bottom: 0.25em;
+			}
+			#main section:first-of-type {
+				padding-top: 0.5em;
+				margin-top: 0;
+			}
 			.game-container {
 				position: relative;
 				width: 100%;
@@ -55,6 +62,25 @@
 			}
 			window.addEventListener('load', scaleGameIframe);
 			window.addEventListener('resize', scaleGameIframe);
+
+			(function () {
+				var container = document.querySelector('.game-container');
+				var iframe = container.querySelector('iframe');
+				var gameKeys = ['Space', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+				iframe.setAttribute('tabindex', '0');
+
+				container.addEventListener('pointerdown', function () {
+					iframe.focus();
+				});
+
+				document.addEventListener('keydown', function (e) {
+					if (document.activeElement !== iframe) return;
+					if (gameKeys.indexOf(e.code) !== -1) {
+						e.preventDefault();
+					}
+				});
+			})();
 		</script>
 	</head>
 	<body class="left-sidebar is-preload">
@@ -160,6 +186,17 @@
 									<div class="white_border"></div>
 								</header>
 								<section>
+									<p>
+										To take control, first click in the game window, then hold shift to take control of the fighter (note this is not supported on mobile devices).
+										<br><br>
+										Spacebar to shoot, arrow keys to move left and right.
+									</p>
+									<div class="game-container">
+										<iframe src="galaga/game.html" allowfullscreen tabindex="0" title="RL Galaga game"></iframe>
+									</div>
+									
+								</section>
+								<section>
 									<header>
 										<h3>Background</h3>
 									</header>
@@ -172,21 +209,8 @@
 									creating a new sim environment (the Galaga game) and then a few hours of training, tweaking, and re-training. While the environment is admittedly very simple, 
 									I was pleasantly surprised I was able to train a reasonably competent fighter without too much effort.
 									<br><br>
-									Check out the agent's behavior which is playing right now in the window below!
+									The agent's behavior is what plays in the window above when no human is controlling!
 									</p>
-									<header>
-										<h3>Play</h3>
-									</header>
-									<p>
-										To take control, first click in the game window, then hold shift to take control of the fighter (note this is not supported on mobile devices).
-										<br><br>
-										Spacebar to shoot, arrow keys to move left and right.
-									</p>
-									<div class="game-container">
-										<iframe src="galaga/game.html" allowfullscreen></iframe>
-									</div>
-								</section>
-								<section>
 									<header>
 										<h3>Future Work</h3>
 									</header>
