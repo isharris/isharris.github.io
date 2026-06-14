@@ -15,7 +15,10 @@
 			var	$this = $(this),
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
-				target = $this.attr('target');
+				target = $this.attr('target'),
+				panelHide = $this.is('[data-nav-panel-hide]');
+
+			if (panelHide) return;
 
 			b.push(
 				'<a ' +

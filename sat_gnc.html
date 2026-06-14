@@ -14,22 +14,35 @@
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
+
+			<!-- Brain Icon Link -->
+			<a href="https://isaac-ai.dev/" class="brain-icon-link" target="_blank" rel="noopener noreferrer" title="AI Chatbot">
+				<img src="images/icons/brain-circuit.svg" alt="AI Chatbot" />
+			</a>
+
 			<nav id="nav">
 				<ul>
 					<li>
 						<a href="index.html">Home</a>
 					</li>
+					<li class="ai-nav-mobile">
+						<a href="https://isaac-ai.dev/" target="_blank" rel="noopener noreferrer">AI - Beta</a>
+					</li>
 					<li>
 						<a href="index.html#banner">Portfolio</a>
 						<ul>
-							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
+							<li><a href="galaga.html">RL Galaga Bot</a></li>
 							<li><a href="osl.html">Bionic Leg Controller</a></li>
+							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
 							<li><a href="gimbal.html">3 DoF Instrumented Gimbal</a></li>
 							<li><a href="podium.html">Mechatronic Ankle Showcase</a></li>
 						</ul>
 					</li>
 					<li><a href="index.html#about">About</a></li>
 					<li><a href="index.html#about">Contact</a></li>
+					<li class="ai-nav-desktop">
+						<a href="https://isaac-ai.dev/" target="_blank" rel="noopener noreferrer" data-nav-panel-hide>AI</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -169,8 +182,9 @@
 											1. Nonlinear control for trajectory tracking: removed the need for gain scheduling around a large grid of operating points and paved the way for 2. and 3.<br>
 											2. Multibody dynamics formulation with quaternion base kinematics: allowed for higher fidelity simulation of satellites with actuated appendages <br>
 											3. Guidance module which generated 5th order spline trajectories: provided smooth acceleration trajectories which in turn could be used to produce smooth feedforward actuator
-											 efforts that stayed within physical limits <br>
+											 efforts that stayed within physical limits
 										</p>
+										<em style="display: block; margin: 0.35em 0 0.5em 1em; color: #00ccbb;">Coming soon: trajectory visualization widget</em><br>
 										All of these algorithms utilized the infamous quaternion as the kinematic description for satellite attitude which removed unwanted singularities caused by Euler angles, 
 										and made the continous spline trajectories possible. It should also be noted that all of these software blocks were written in python with the only 3rd party dependencies being
 										numpy and sympy (the multibody dynamics matrices were also converted to C for speed optimization). This was a must at a small company averse to large software subscriptions (MATLAB) and the desire for 
