@@ -19,6 +19,15 @@
 			a.puffer-link:hover {
 				color: #d4a5ff;
 			}
+			.future-work-list {
+				margin: 0.5em 0 0 0;
+				padding-left: 1.25em;
+				list-style-type: disc;
+			}
+			.future-work-list li {
+				margin: 0.35em 0;
+				padding-left: 0.25em;
+			}
 			.game-container {
 				position: relative;
 				width: 100%;
@@ -67,9 +76,9 @@
 					<li>
 						<a href="index.html#banner">Portfolio</a>
 						<ul>
-							<li><a href="galaga.html">RL Galaga</a></li>
-							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
+							<li><a href="galaga.html">RL Galaga Bot</a></li>
 							<li><a href="osl.html">Bionic Leg Controller</a></li>
+							<li><a href="sat_gnc.html">Satellite Attitude Control</a></li>
 							<li><a href="gimbal.html">3 DoF Instrumented Gimbal</a></li>
 							<li><a href="podium.html">Mechatronic Ankle Showcase</a></li>
 						</ul>
@@ -147,6 +156,7 @@
 								<header>
 									<h25>Galaga Puffer Style</h25>
 									<h3><font color="white">Training a Galaga Fighter with Reinforcement Learning</font></h3>
+									<h4>*Hobby Project</h4>
 									<div class="white_border"></div>
 								</header>
 								<section>
@@ -155,18 +165,19 @@
 									</header>
 									<p><a href="https://puffer.ai" class="puffer-link" target="_blank" rel="noopener noreferrer">PufferLib</a> is an increasingly popular repository which provides a convenient framework for training reinforcement learning agents.
 									Among its claims to fame is its extremely high throughput, allowing for training agents orders of magnitudes faster than traditional workflows. It achieves
-									this by leveraging vectorized environments, direct memory access to contiguous observation buffers, and fast simulation environments written in C. 
+									this by leveraging vectorized environments, direct memory access to contiguous buffers, and fast simulation environments written in C. 
 									
 									Given its promising capability, I decided to fork the repo, and try my hand at training a Galaga fighter with it. Galaga is a classic arcade game that I have fond
 									memories of playing with my Dad, and it consists of just 3 actions: left, right, and shoot - making it an easy example to test out. This first required
-									creating a new sim environment (the Galaga game) and then a few hours of training, tweaking, and re-training. While the environment is admittedly very simple, and
-									I am not doing any meaningful evaluation post-training, I was pleasantly surprised I was able to train a reasonably competent fighter without too much effort.
+									creating a new sim environment (the Galaga game) and then a few hours of training, tweaking, and re-training. While the environment is admittedly very simple, 
+									I was pleasantly surprised I was able to train a reasonably competent fighter without too much effort.
+									<br><br>
+									Check out the agent's behavior which is playing right now in the window below!
 									</p>
 									<header>
 										<h3>Play</h3>
 									</header>
 									<p>
-										Check out the agent's behavior which is playing right now in the window below!
 										To take control, first click in the game window, then hold shift to take control of the fighter (note this is not supported on mobile devices).
 										<br><br>
 										Spacebar to shoot, arrow keys to move left and right.
@@ -177,13 +188,13 @@
 								</section>
 								<section>
 									<header>
-										<h3>About</h3>
+										<h3>Future Work</h3>
 									</header>
-									<p>
-										A Galaga-style arcade game environment built with
-										<a href="https://github.com/PufferAI/PufferLib" target="_blank" rel="noopener noreferrer">PufferLib</a>. The game is compiled to WebAssembly via Emscripten
-										and rendered with raylib, allowing a trained RL agent to run entirely in the browser.
-									</p>
+									<ul class="future-work-list">
+										<li>Expand the sim environment to be more 1-to-1 with original Galaga game including more complicated enemy behavior</li>
+										<li>Experiment with different RL neural net structures beyond default LSTM wrapper included with PufferLib</li>
+										<li>Evaluate performance against a validation set of enemies it has never seen before</li>
+									</ul>
 								</section>
 							</article>
 						</div>
