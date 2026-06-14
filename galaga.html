@@ -67,19 +67,31 @@
 				var container = document.querySelector('.game-container');
 				var iframe = container.querySelector('iframe');
 				var gameKeys = ['Space', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+				var gameActive = false;
 
 				iframe.setAttribute('tabindex', '0');
 
-				container.addEventListener('pointerdown', function () {
+				function activateGame() {
+					gameActive = true;
 					iframe.focus();
-				});
+				}
 
-				document.addEventListener('keydown', function (e) {
-					if (document.activeElement !== iframe) return;
-					if (gameKeys.indexOf(e.code) !== -1) {
-						e.preventDefault();
+				container.addEventListener('pointerdown', activateGame);
+				iframe.addEventListener('focus', function () { gameActive = true; });
+				document.addEventListener('pointerdown', function (e) {
+					if (!container.contains(e.target)) {
+						gameActive = false;
 					}
 				});
+
+				function blockGameScroll(e) {
+					if (!gameActive && document.activeElement !== iframe) return;
+					if (gameKeys.indexOf(e.code) === -1) return;
+					e.preventDefault();
+				}
+
+				window.addEventListener('keydown', blockGameScroll, true);
+				window.addEventListener('keyup', blockGameScroll, true);
 			})();
 		</script>
 	</head>
