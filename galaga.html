@@ -67,31 +67,96 @@
 				var container = document.querySelector('.game-container');
 				var iframe = container.querySelector('iframe');
 				var gameKeys = ['Space', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
-				var gameActive = false;
+				var savedScrollY = 0;
+				var scrollLocked = false;
 
 				iframe.setAttribute('tabindex', '0');
 
+				function isGameKey(e) {
+					return gameKeys.indexOf(e.code) !== -1 || e.key === ' ' || e.keyCode === 32;
+				}
+
+				function lockPageScroll() {
+					if (scrollLocked) return;
+					scrollLocked = true;
+					savedScrollY = window.scrollY;
+					document.documentElement.style.overflow = 'hidden';
+					document.body.style.overflow = 'hidden';
+					document.body.style.position = 'fixed';
+					document.body.style.top = '-' + savedScrollY + 'px';
+					document.body.style.width = '100%';
+				}
+
+				function unlockPageScroll() {
+					if (!scrollLocked) return;
+					scrollLocked = false;
+					document.documentElement.style.overflow = '';
+					document.body.style.overflow = '';
+					document.body.style.position = '';
+					document.body.style.top = '';
+					document.body.style.width = '';
+					window.scrollTo(0, savedScrollY);
+				}
+
 				function activateGame() {
-					gameActive = true;
+					lockPageScroll();
 					iframe.focus();
 				}
 
-				container.addEventListener('pointerdown', activateGame);
-				iframe.addEventListener('focus', function () { gameActive = true; });
-				document.addEventListener('pointerdown', function (e) {
-					if (!container.contains(e.target)) {
-						gameActive = false;
-					}
-				});
+				function deactivateGame() {
+					unlockPageScroll();
+				}
 
 				function blockGameScroll(e) {
-					if (!gameActive && document.activeElement !== iframe) return;
-					if (gameKeys.indexOf(e.code) === -1) return;
+					if (!isGameKey(e)) return;
+					if (!scrollLocked && document.activeElement !== iframe) return;
 					e.preventDefault();
 				}
 
+				function wireIframe() {
+					var doc = iframe.contentDocument;
+					var win = iframe.contentWindow;
+					if (!doc || !win) return;
+
+					var canvas = doc.getElementById('canvas');
+					if (canvas) {
+						canvas.addEventListener('mousedown', activateGame);
+						canvas.addEventListener('pointerdown', activateGame);
+					}
+
+					win.addEventListener('keydown', blockGameScroll, true);
+					win.addEventListener('keyup', blockGameScroll, true);
+					win.addEventListener('keypress', blockGameScroll, true);
+				}
+
+				container.addEventListener('mousedown', activateGame);
+				iframe.addEventListener('focus', activateGame);
+				iframe.addEventListener('load', wireIframe);
+				if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
+					wireIframe();
+				}
+
+				document.addEventListener('mousedown', function (e) {
+					if (!container.contains(e.target)) {
+						deactivateGame();
+					}
+				});
+
+				document.addEventListener('focusin', function (e) {
+					if (container.contains(e.target) || e.target === iframe) {
+						return;
+					}
+					deactivateGame();
+				});
+
+				window.addEventListener('message', function (e) {
+					if (e.source !== iframe.contentWindow) return;
+					if (e.data === 'galaga:focus') activateGame();
+				});
+
 				window.addEventListener('keydown', blockGameScroll, true);
 				window.addEventListener('keyup', blockGameScroll, true);
+				window.addEventListener('keypress', blockGameScroll, true);
 			})();
 		</script>
 	</head>
