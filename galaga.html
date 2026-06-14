@@ -12,6 +12,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			a.puffer-link {
+				color: #b366ff;
+				text-decoration: underline;
+			}
+			a.puffer-link:hover {
+				color: #d4a5ff;
+			}
 			.game-container {
 				position: relative;
 				width: 100%;
@@ -115,21 +122,12 @@
 										</p>
 									</div>
 									<div class="col-4">
-										<i class="icon solid fa-desktop" aria-hidden="true"></i>
-									</div>
-									<div class="col-8">
-										<h4>Web Runtime</h4>
-										<p>
-											Emscripten <br> WebAssembly <br> raylib
-										</p>
-									</div>
-									<div class="col-4">
 										<i class="icon solid fa-brain" aria-hidden="true"></i>
 									</div>
 									<div class="col-8">
 										<h4>AI Technique</h4>
 										<p>
-											Deep RL <br> Policy Gradient
+											Deep RL <br> PPO
 										</p>
 									</div>
 									<div class="col-4">
@@ -147,16 +145,31 @@
 						<div class="col-8 col-12-mobile imp-mobile" id="content">
 							<article id="main">
 								<header>
-									<h25>RL Galaga</h25>
-									<h3><font color="white">Reinforcement Learning Meets Classic Arcade</font></h3>
+									<h25>Galaga Puffer Style</h25>
+									<h3><font color="white">Training a Galaga Fighter with Reinforcement Learning</font></h3>
 									<div class="white_border"></div>
 								</header>
 								<section>
 									<header>
+										<h3>Background</h3>
+									</header>
+									<p><a href="https://puffer.ai" class="puffer-link" target="_blank" rel="noopener noreferrer">PufferLib</a> is an increasingly popular repository which provides a convenient framework for training reinforcement learning agents.
+									Among its claims to fame is its extremely high throughput, allowing for training agents orders of magnitudes faster than traditional workflows. It achieves
+									this by leveraging vectorized environments, direct memory access to contiguous observation buffers, and fast simulation environments written in C. 
+									
+									Given its promising capability, I decided to fork the repo, and try my hand at training a Galaga fighter with it. Galaga is a classic arcade game that I have fond
+									memories of playing with my Dad, and it consists of just 3 actions: left, right, and shoot - making it an easy example to test out. This first required
+									creating a new sim environment (the Galaga game) and then a few hours of training, tweaking, and re-training. While the environment is admittedly very simple, and
+									I am not doing any meaningful evaluation post-training, I was pleasantly surprised I was able to train a reasonably competent fighter without too much effort.
+									</p>
+									<header>
 										<h3>Play</h3>
 									</header>
-									<p>To play, first click in the game window, then hold shift to take control of the fighter.
-									Spacebar to shoot, arrow keys to move left and right.
+									<p>
+										Check out the agent's behavior which is playing right now in the window below!
+										To take control, first click in the game window, then hold shift to take control of the fighter (note this is not supported on mobile devices).
+										<br><br>
+										Spacebar to shoot, arrow keys to move left and right.
 									</p>
 									<div class="game-container">
 										<iframe src="galaga/game.html" allowfullscreen></iframe>
